@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="1.0"
+    xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx"
+    xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata"
+    xmlns:sap="http://www.sap.com/Protocols/SAPData">
+    <edmx:DataServices m:DataServiceVersion="2.0">
+        <Schema Namespace="MATERIAL" xml:lang="en"
+            xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+            <EntityType Name="Material" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="MaterialNumber"/>
+                </Key>
+                <Property Name="MaterialDescription" Type="Edm.String" Nullable="false" MaxLength="40" m:FC_TargetPath="SyndicationTitle" m:FC_KeepInContent="true" sap:label="Material Description" sap:creatable="false" sap:updatable="false"/>
+                <Property Name="CreatedOn" Type="Edm.DateTime" sap:label="Created On (Date/Time in UTC)" sap:creatable="false" sap:updatable="false" sap:filterable="false"/>
+                <Property Name="SalesOrganization" Type="Edm.String" Nullable="false" MaxLength="4" sap:label="Sales Organization" sap:creatable="false" sap:updatable="false"/>
+                <Property Name="SizeDimensions" Type="Edm.String" Nullable="false" MaxLength="32" sap:label="Size/dimensions" sap:creatable="false" sap:updatable="false" sap:filterable="false"/>
+                <Property Name="Plant" Type="Edm.String" Nullable="false" MaxLength="4" sap:label="Plant" sap:creatable="false" sap:updatable="false"/>
+                <Property Name="ProductHierarchy" Type="Edm.String" Nullable="false" MaxLength="255" sap:label="Product Hierarchy" sap:creatable="false" sap:updatable="false" sap:filterable="false"/>
+                <Property Name="LabelType" Type="Edm.String" Nullable="false" MaxLength="2" sap:label="Label Type" sap:creatable="false" sap:updatable="false" sap:filterable="false"/>
+                <Property Name="CreatedBy" Type="Edm.String" Nullable="false" MaxLength="12" sap:label="Created By" sap:creatable="false" sap:updatable="false" sap:filterable="false"/>
+                <Property Name="NetWeight" Type="Edm.Decimal" Nullable="false" Precision="13" Scale="3" sap:label="Net Weight" sap:creatable="false" sap:updatable="false" sap:filterable="false"/>
+                <Property Name="DimensionUnit" Type="Edm.String" Nullable="false" MaxLength="3" sap:label="Dimension Unit" sap:creatable="false" sap:updatable="false" sap:filterable="false"/>
+                <Property Name="PurchasingValueKey" Type="Edm.String" Nullable="false" MaxLength="4" sap:label="Purchasing Value Key" sap:creatable="false" sap:updatable="false" sap:filterable="false"/>
+                <Property Name="BaseUOM" Type="Edm.String" Nullable="false" MaxLength="3" sap:label="Base Unit of Measure" sap:creatable="false" sap:updatable="false" sap:filterable="false"/>
+                <Property Name="Volume" Type="Edm.Decimal" Nullable="false" Precision="13" Scale="3" sap:label="Volume" sap:creatable="false" sap:updatable="false" sap:filterable="false"/>
+                <Property Name="PlantDeletionFlag" Type="Edm.String" Nullable="false" MaxLength="1" sap:label="Plant Deletion Flag" sap:creatable="false" sap:updatable="false" sap:filterable="false"/>
+                <Property Name="Width" Type="Edm.Decimal" Nullable="false" Precision="13" Scale="3" sap:label="Width" sap:creatable="false" sap:updatable="false" sap:filterable="false"/>
+                <Property Name="ChangedBy" Type="Edm.String" Nullable="false" MaxLength="12" sap:label="Changed By" sap:creatable="false" sap:updatable="false" sap:filterable="false"/>
+                <Property Name="MaterialGroup" Type="Edm.String" Nullable="false" MaxLength="255" sap:label="Material Group" sap:creatable="false" sap:updatable="false" sap:filterable="false"/>
+                <Property Name="ChangedOn" Type="Edm.DateTime" m:FC_TargetPath="SyndicationUpdated" m:FC_KeepInContent="true" sap:label="Changed On  (Date/Time in UTC)" sap:creatable="false" sap:updatable="false" sap:filterable="false"/>
+                <Property Name="BaseUOMDescription" Type="Edm.String" Nullable="false" MaxLength="255" sap:label="Base Unit of Measure" sap:creatable="false" sap:updatable="false" sap:filterable="false"/>
+                <Property Name="MaterialType" Type="Edm.String" Nullable="false" MaxLength="255" sap:label="Material Type" sap:creatable="false" sap:updatable="false" sap:filterable="false"/>
+                <Property Name="VolumeUnitInISO" Type="Edm.String" Nullable="false" MaxLength="3" sap:label="Volume Unit ISO" sap:creatable="false" sap:updatable="false" sap:filterable="false"/>
+                <Property Name="WeightUnitDescription" Type="Edm.String" Nullable="false" MaxLength="255" sap:label="Weight Unit" sap:creatable="false" sap:updatable="false" sap:filterable="false"/>
+                <Property Name="PurchaseOrderUnit" Type="Edm.String" Nullable="false" MaxLength="3" sap:label="Purchase Order Unit" sap:creatable="false" sap:updatable="false" sap:filterable="false"/>
+                <Property Name="GrossWeight" Type="Edm.Decimal" Nullable="false" Precision="13" Scale="3" sap:label="Gross Weight" sap:creatable="false" sap:updatable="false" sap:filterable="false"/>
+                <Property Name="VolumeUnit" Type="Edm.String" Nullable="false" MaxLength="3" sap:label="Volume Unit" sap:creatable="false" sap:updatable="false" sap:filterable="false"/>
+                <Property Name="WeightUnitInISO" Type="Edm.String" Nullable="false" MaxLength="3" sap:label="Weight Unit ISO" sap:creatable="false" sap:updatable="false" sap:filterable="false"/>
+                <Property Name="StatusOfMaterial" Type="Edm.String" Nullable="false" MaxLength="1" sap:label="Status of Material" sap:creatable="false" sap:updatable="false" sap:filterable="false"/>
+                <Property Name="WeightUnit" Type="Edm.String" Nullable="false" MaxLength="3" sap:label="Weight Unit" sap:creatable="false" sap:updatable="false" sap:filterable="false"/>
+                <Property Name="DimensionUnitInISO" Type="Edm.String" Nullable="false" MaxLength="3" sap:label="Dimension Unit ISO" sap:creatable="false" sap:updatable="false" sap:filterable="false"/>
+                <Property Name="PurchaseOrderUnitDescription" Type="Edm.String" Nullable="false" MaxLength="255" sap:label="Unit of Measure" sap:creatable="false" sap:updatable="false" sap:filterable="false"/>
+                <Property Name="IndustrySector" Type="Edm.String" Nullable="false" MaxLength="255" sap:label="Industry Sector" sap:creatable="false" sap:updatable="false" sap:filterable="false"/>
+                <Property Name="MaterialNumber" Type="Edm.String" Nullable="false" MaxLength="18" sap:label="Material Number" sap:creatable="false" sap:updatable="false"/>
+                <Property Name="Length" Type="Edm.Decimal" Nullable="false" Precision="13" Scale="3" sap:label="Length" sap:creatable="false" sap:updatable="false" sap:filterable="false"/>
+                <Property Name="OldMaterialNumber" Type="Edm.String" Nullable="false" MaxLength="18" sap:label="Old Material Number" sap:creatable="false" sap:updatable="false" sap:filterable="false"/>
+                <Property Name="VolumeUnitDescription" Type="Edm.String" Nullable="false" MaxLength="255" sap:label="Volume Unit" sap:creatable="false" sap:updatable="false" sap:filterable="false"/>
+                <Property Name="PurchaseOrderUnitInISO" Type="Edm.String" Nullable="false" MaxLength="3" sap:label="Purchase Order Unit in ISO Code" sap:creatable="false" sap:updatable="false" sap:filterable="false"/>
+                <Property Name="DimensionUnitDescription" Type="Edm.String" Nullable="false" MaxLength="255" sap:label="Dimension Unit" sap:creatable="false" sap:updatable="false" sap:filterable="false"/>
+                <Property Name="BaseUOMISO" Type="Edm.String" Nullable="false" MaxLength="3" sap:label="Base Unit of Measure ISO" sap:creatable="false" sap:updatable="false" sap:filterable="false"/>
+                <Property Name="Height" Type="Edm.Decimal" Nullable="false" Precision="13" Scale="3" sap:label="Height" sap:creatable="false" sap:updatable="false" sap:filterable="false"/>
+                <Property Name="MaterialDivision" Type="Edm.String" Nullable="false" MaxLength="2" sap:label="Material Divison" sap:creatable="false" sap:updatable="false" sap:filterable="false"/>
+                <Property Name="IssueUnit" Type="Edm.String" Nullable="false" MaxLength="3" sap:label="Issue Unit" sap:creatable="false" sap:updatable="false" sap:filterable="false"/>
+                <NavigationProperty Name="AlternativeUOMs" Relationship="MATERIAL.AlternativeUOMs" FromRole="FromRole_AlternativeUOMs" ToRole="ToRole_AlternativeUOMs"/>
+            </EntityType>
+            <EntityType Name="AlternativeUOM" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="AltUnitOfMeasure"/>
+                    <PropertyRef Name="MaterialNumber"/>
+                </Key>
+                <Property Name="EANCategory" Type="Edm.String" Nullable="false" MaxLength="2" sap:label="Category of International Article Number (EAN)" sap:creatable="false" sap:updatable="false" sap:filterable="false"/>
+                <Property Name="UOMDescription" Type="Edm.String" Nullable="false" MaxLength="255" sap:label="Alternate Unit Of Measure" sap:creatable="false" sap:updatable="false" sap:filterable="false"/>
+                <Property Name="AltUnitOfMeasure" Type="Edm.String" Nullable="false" MaxLength="3" sap:label="Alternate unit of measure" sap:creatable="false" sap:updatable="false" sap:filterable="false"/>
+                <Property Name="EANUPC" Type="Edm.String" Nullable="false" MaxLength="18" sap:label="International Article Number (EAN/UPC)" sap:creatable="false" sap:updatable="false" sap:filterable="false"/>
+                <Property Name="AltUnitOfMeasureInISO" Type="Edm.String" Nullable="false" MaxLength="3" sap:label="Alternate unit of measure ISO" sap:creatable="false" sap:updatable="false" sap:filterable="false"/>
+                <Property Name="Numerator" Type="Edm.Decimal" Nullable="false" Precision="5" Scale="0" sap:label="Numerator" sap:creatable="false" sap:updatable="false" sap:filterable="false"/>
+                <Property Name="Denominator" Type="Edm.Decimal" Nullable="false" Precision="5" Scale="0" sap:label="Denominator" sap:creatable="false" sap:updatable="false" sap:filterable="false"/>
+                <Property Name="EANCategoryDescription" Type="Edm.String" Nullable="false" MaxLength="255" sap:label="EAN Category" sap:creatable="false" sap:updatable="false" sap:filterable="false"/>
+                <Property Name="MaterialNumber" Type="Edm.String" Nullable="false" MaxLength="18" sap:creatable="false" sap:updatable="false"/>
+            </EntityType>
+            <Association Name="AlternativeUOMs" sap:content-version="1">
+                <End Type="MATERIAL.Material" Multiplicity="1" Role="FromRole_AlternativeUOMs"/>
+                <End Type="MATERIAL.AlternativeUOM" Multiplicity="*" Role="ToRole_AlternativeUOMs"/>
+            </Association>
+            <EntityContainer Name="MATERIAL" m:IsDefaultEntityContainer="true">
+                <EntitySet Name="MaterialCollection" EntityType="MATERIAL.Material" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1"/>
+                <EntitySet Name="AlternativeUOMCollection" EntityType="MATERIAL.AlternativeUOM" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1"/>
+                <AssociationSet Name="AssocSet_AlternativeUOMs" Association="MATERIAL.AlternativeUOMs" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+                    <End EntitySet="MaterialCollection" Role="FromRole_AlternativeUOMs"/>
+                    <End EntitySet="AlternativeUOMCollection" Role="ToRole_AlternativeUOMs"/>
+                </AssociationSet>
+            </EntityContainer>
+            <atom:link rel="self" href="https://webide-s0010850258trial.dispatcher.hanatrial.ondemand.com/destinations/sapes1/sap/opu/odata/iwcnt/MATERIAL/$metadata"
+                xmlns:atom="http://www.w3.org/2005/Atom"/>
+                <atom:link rel="latest-version" href="https://webide-s0010850258trial.dispatcher.hanatrial.ondemand.com/destinations/sapes1/sap/opu/odata/iwcnt/MATERIAL/$metadata"
+                    xmlns:atom="http://www.w3.org/2005/Atom"/>
+                </Schema>
+            </edmx:DataServices>
+        </edmx:Edmx>

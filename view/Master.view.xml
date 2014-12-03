@@ -1,0 +1,63 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m"
+	xmlns:shellfooter="sap.ushell.ui.footerbar" controllerName="EPM-Material.view.Master">
+	
+	<Page id="page" title="{i18n>MASTER_TITLE}">
+		<subHeader id="subHeader">
+			<Bar id="bar1">
+				<contentMiddle id="contentMiddle">
+					<SearchField id="searchField" showRefreshButton="{device>/isNoTouch}"
+						placeholder="{i18n>MASTER_SEARCH_PLACEHOLDER}" search="handleSearch"
+						tooltip="{i18n>MASTER_SEARCH_TOOLTIP}" width="100%">
+					</SearchField>
+				</contentMiddle>
+			</Bar>
+		</subHeader>
+		
+		<content id="content">
+		
+			<List id="list" items="{/MaterialCollection}" mode="{device>/listMode}"
+		
+				select="handleSelect" growing="true" growingScrollToLoad="true">
+				 <customData id="customData1">
+                            <core:CustomData id="coreCustomData1" key="sapDtResourcePath" value="MaterialCollection"></core:CustomData>
+                 </customData>
+				 <items id="listItems">
+					<ObjectListItem id="mainListItem" type="{device>/listItemType}"
+					 title="{MaterialDescription}"
+					 number="{Plant}"
+					 numberUnit="{BaseUOM}"
+					press="handleSelect">
+						<customData id="customData2">
+                             <core:CustomData id="coreCustomData2" key="sapDtResourcePath" value="MaterialCollection"></core:CustomData>
+                        </customData>
+						<attributes id="attributes">
+							
+								<ObjectAttribute id="ATTR1" text="{Plant}">
+								<customData id="customData3">
+									<core:CustomData id="coreCustomData3" key="sapDtResourcePath" value="MaterialCollection"></core:CustomData>
+								</customData>
+								</ObjectAttribute>
+							
+							
+								<ObjectAttribute id="ATTR2" text="{SalesOrganization}">
+									<customData id="customData4">
+										<core:CustomData id="coreCustomData4" key="sapDtResourcePath" value="MaterialCollection"></core:CustomData>
+									</customData>
+								</ObjectAttribute>
+							
+						</attributes>
+					</ObjectListItem>
+				</items>
+			</List>
+		</content>
+		
+		<footer id="footer">
+			<Bar id="bar2">
+				<contentLeft id="contentLeft">
+					<shellfooter:SettingsButton id="settingsButton"></shellfooter:SettingsButton>
+				</contentLeft>
+			</Bar>
+		</footer>
+	</Page>
+	
+</mvc:View>

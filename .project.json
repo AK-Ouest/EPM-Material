@@ -1,0 +1,20 @@
+{
+  "generation": [
+    {
+      "templateId": "fioriexttemplate.starterApplication",
+      "templateVersion": "1.4.0",
+      "dateTimeStamp": "Wed, 03 Dec 2014 00:17:30 GMT"
+    }
+  ],
+  "translation": {
+    "translationDomain": "",
+    "supportedLanguages": "en,fr,de",
+    "defaultLanguage": "en",
+    "defaultI18NPropertyFile": "i18n.properties",
+    "resourceModelName": "i18n"
+  },
+  "mockpreview": {
+    "mockUri": "/sap/opu/odata/iwcnt/MATERIAL",
+    "loadJSONFiles": false
+  }
+}
